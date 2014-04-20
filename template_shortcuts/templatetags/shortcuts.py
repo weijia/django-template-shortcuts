@@ -42,7 +42,14 @@ def css_tag(parser, token):
 register = template.Library()
 JS_TAGS = ["angular", "chrome_frame", "dojo", "ext_core",
            "jquery", "jquery_ui", "mootools", "modernizr",
-           "prototype", "scriptaculos", "webfont"]
+           "prototype", "scriptaculos", "webfont", "bootstrap"]
+
 
 for tag in JS_TAGS:
     register.tag(tag, javascript_tag)
+
+
+CSS_TAGS = ['bootstrap_css']
+
+for tag in CSS_TAGS:
+    register.tag(tag, css_tag)

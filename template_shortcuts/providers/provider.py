@@ -49,3 +49,6 @@ class CDNProvider(object):
 
     def webfont(self, version):
         raise NotImplementedError()
+
+    def bootstrap(self, version):
+        raise NotImplementedError()
